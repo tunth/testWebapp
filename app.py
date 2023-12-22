@@ -1,4 +1,3 @@
-# app3.py
 import plotly.graph_objects as go
 import numpy as np
 from numpy import log as ln
@@ -43,17 +42,17 @@ def plotfunc(z):
     f = lambda x: 1/(ln(x)+0.1)
     g = lambda x: 0.5*x
     
-    if z == '': z=1
+    if z == '' : z=1
     else: z = float(z)
 
     figure = go.Figure()
     figure.add_trace(
         go.Scatter(x=x, y=f(x),
-                name='ln(x)')
+                name='Chi Phí')
     )
     figure.add_trace(
         go.Scatter(x=x, y=g(x),
-                name='line(x)')
+                name='Lợi ích')
     )
     figure.add_traces(
         go.Scatter(x=[z], y=f([z]),
@@ -69,7 +68,7 @@ def plotfunc(z):
         paper_bgcolor="LightSteelBlue",
     )
     # figure.update_layout(width=int(width))
-    figure.update_layout(width=400)
+    # figure.update_layout(width=400)
     # print("Giá trị min cost:", min(f(x)))
     # figure.show()
 
