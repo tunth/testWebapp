@@ -9,6 +9,7 @@ from numpy import log as ln
 import datetime as dt
 
 app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 # data input
 data_input = {
@@ -244,4 +245,5 @@ def display_output(rows, columns):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run_server(debug=True)
